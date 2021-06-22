@@ -8,8 +8,10 @@ pipeline {
 
   stages {
     stage('Deploy') {
+      steps {
         container('maven')
         sh "mvn -B clean deploy"
+      }
     }
   }
 }
